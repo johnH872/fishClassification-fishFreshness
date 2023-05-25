@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537310655264",
+    "project_id": "fish-classification-mobile",
+    "storage_bucket": "fish-classification-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537310655264:android:577ad491b059225e6ddd45",
+        "android_client_info": {
+          "package_name": "hcmute.edu.project_06_fishclassification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537310655264-lontscp30mmgerdhse72t1j3lecbpf15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKYIQovWfNSiRvHZvqRnArXMQ9j3ci-XE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537310655264-lontscp30mmgerdhse72t1j3lecbpf15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
