@@ -11,7 +11,7 @@ features:
 ![image](https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/22900f41-4ba3-45f4-80a6-e289637b724c)
 ![image](https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/68183fea-e952-4164-a1d2-24a7631ea36f)
 <p float="left">
-  <img src="![image](https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/4df1ff84-3278-43fd-8c2b-5c326a96d03c)" width="100" />
+  <img src="https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/4df1ff84-3278-43fd-8c2b-5c326a96d03c" width="100" />
   <img src="![image](https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/b8388cbd-c4c9-4e1a-b179-2aa2f16ec9eb)" width="100" /> 
   <img src="![image](https://github.com/johnH872/fishClassification-fishFreshness/assets/87011461/f16d061e-5ab0-44a8-8f6e-cee086a0bb25)" width="100" />
 </p>
