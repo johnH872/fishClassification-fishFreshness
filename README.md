@@ -1,6 +1,6 @@
 # fishClassification-fishFreshness
 ## Description
-Mobile app that helps user classify fishes in the market and determine fish's freshness through eyes. 
+Mobile app that helps user classify fishes in the market and determine fish's freshness through eyes. <br>
 features: 
 * User account: login, register, logout, change password
 * User can capture image or use gallery image
