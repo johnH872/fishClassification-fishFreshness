@@ -1,12 +1,16 @@
 package hcmute.edu.project_06_fishclassification.fragments;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,7 +50,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_personal, container, false);
     }
-    TextView userName, mCollection;
+    public TextView userName, mCollection;
     private RecyclerView rclView;
     private List<Image> savedImages;
     private ImageItemAdapter imageItemAdapter;
@@ -54,9 +58,19 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
     ProgressBar progressBar;
     FirebaseAuth auth;
 
+    List<String> docIDs;
+    List<String> imgUrl;
+
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() { //Get data form service and send to activity
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            mCollection.setText("My Collection " + "(" + docIDs.size() + ")");
+        }
+    };
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         Toolbar toolbar = getView().findViewById(R.id.topAppBar);
         progressBar = view.findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
@@ -64,6 +78,8 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
         auth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         savedImages = new ArrayList<>();
+        docIDs = new ArrayList<>();
+        imgUrl = new ArrayList<>();
         rclView = view.findViewById(R.id.rcl_savedImage);
         userName = view.findViewById(R.id.tv_username);
         mCollection = view.findViewById(R.id.mCollection);
@@ -72,10 +88,12 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
         //display saved images
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2);
         rclView.setLayoutManager(gridLayoutManager);
-        imageItemAdapter = new ImageItemAdapter(this.getContext(), savedImages); ///
+        imageItemAdapter = new ImageItemAdapter(this.getContext(), savedImages, docIDs, imgUrl); ///
         rclView.setAdapter(imageItemAdapter);
         GetImageWithUid();
 
+        LocalBroadcastManager.getInstance(getContext())
+                .registerReceiver(broadcastReceiver, new IntentFilter("_count"));
     }
 
     private void getUserName() {
@@ -118,9 +136,12 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
                         s = String.valueOf(Integer.valueOf(s) + 1);
                         mCollection.setText("My Collection " + "(" + s + ")");
                         savedImages.add(image);
+                        docIDs.add(dc.getDocument().getId());
+                        imgUrl.add(image.getImageUrl());
                     }
                 }
                 imageItemAdapter.notifyDataSetChanged();
+                Log.e("E", docIDs.toString());
                 if (progressBar.getVisibility() == View.VISIBLE)
                     progressBar.setVisibility(View.GONE);
             }
@@ -146,5 +167,10 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
     @Override
     public void onClick(View view) {
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 }

@@ -14,4 +14,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/HOANG/Downloads/project_06_fishClassification/sdk/.cxx/Debug/4t6og5b2/x86
+-- Build files have been written to: D:/study/Nam3_HK2/mobile/final_project/project_06_fishClassification/sdk/.cxx/Debug/4t6og5b2/x86

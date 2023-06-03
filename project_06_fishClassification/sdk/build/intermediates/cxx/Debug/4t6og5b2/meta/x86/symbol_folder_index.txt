@@ -1,1 +1,1 @@
-C:\Users\HOANG\Downloads\project_06_fishClassification\sdk\build\intermediates\cxx\Debug\4t6og5b2\obj\x86
+D:\study\Nam3_HK2\mobile\final_project\project_06_fishClassification\sdk\build\intermediates\cxx\Debug\4t6og5b2\obj\x86

@@ -271,7 +271,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                             "saved_images/"+fileName+".jpg");
             // adding listeners on upload
             // or failure of image
-
             ref.putFile(filePath)
                     .addOnSuccessListener(
                             new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -353,6 +352,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     }
                 });
     }
+
+
+
 
     //Predict fish images
     private void predictFish() {

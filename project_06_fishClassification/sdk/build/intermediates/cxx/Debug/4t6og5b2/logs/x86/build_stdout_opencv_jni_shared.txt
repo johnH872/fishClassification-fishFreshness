@@ -1,2 +1,2 @@
-ninja: Entering directory `C:\Users\HOANG\Downloads\project_06_fishClassification\sdk\.cxx\Debug\4t6og5b2\x86'
+ninja: Entering directory `D:\study\Nam3_HK2\mobile\final_project\project_06_fishClassification\sdk\.cxx\Debug\4t6og5b2\x86'
 ninja: no work to do.

@@ -1,1 +1,1 @@
-C:\Users\HOANG\Downloads\project_06_fishClassification\sdk\libcxx_helper\CMakeLists.txt
+D:\study\Nam3_HK2\mobile\final_project\project_06_fishClassification\sdk\libcxx_helper\CMakeLists.txt

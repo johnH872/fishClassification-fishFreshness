@@ -3,6 +3,6 @@
 3    package="org.opencv" >
 4
 5    <uses-sdk android:minSdkVersion="27" />
-5-->C:\Users\HOANG\Downloads\project_06_fishClassification\sdk\java\AndroidManifest.xml
+5-->D:\study\Nam3_HK2\mobile\final_project\project_06_fishClassification\sdk\java\AndroidManifest.xml
 6
 7</manifest>

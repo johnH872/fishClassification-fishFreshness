@@ -172,17 +172,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_nameDetected" />
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
         android:id="@+id/card_view_fisheye"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="1"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_link"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.51">
 
         <ImageView
             android:id="@+id/fisheye_img"
@@ -199,13 +199,13 @@
         android:id="@+id/tv_freshOrNonFish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
         android:text="Cá tươi"
         android:textSize="27dp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toEndOf="@+id/card_view_fisheye"
         app:layout_constraintTop_toBottomOf="@+id/tv_link" />
 
@@ -220,5 +220,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.943" />
 </androidx.constraintlayout.widget.ConstraintLayout>
