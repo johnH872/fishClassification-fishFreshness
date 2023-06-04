@@ -374,7 +374,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             // Runs model inference and gets result.
             Model.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
-            if (getAccuracy(outputFeature0.getFloatArray()) < 0.65) {
+            if (getAccuracy(outputFeature0.getFloatArray()) < 0.68) {
                 tvNameDetected.setText("Đây có thể không phải cá !!!");
                 tvLink.setText("https://google.com");
                 isFish = false;
